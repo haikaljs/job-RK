@@ -3,9 +3,16 @@
 @section('content')
 
     <div class="container my-5">
-        <div class="row justify-content-center">
+        <div class="fw-bold fs-5">
             Hello, {{ auth()->user()->name }}
+            @if (Auth::check() && auth()->user()->user_type == 'employer')
             <p>Your trial will expire on {{ auth()->user()->user_trial }}</p>
+            @endif
+        </div>
+        
+        
+        <div class="row justify-content-center">
+           
 
             <div class="col-md-3">
                 <div class="card bg-secondary">
