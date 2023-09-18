@@ -6,6 +6,7 @@
         <div class="row justify-content-center">
                 
                         <div class="col-lg-5">
+                           @include('message')
                             <div class="card shadow-lg">
                                 
                                 <div class="card-body p-5">

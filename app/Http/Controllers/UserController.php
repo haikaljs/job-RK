@@ -33,7 +33,8 @@ class UserController extends Controller
         'user_type' => self::JOB_SEEKER
        ]);
 
-       return redirect()->route('login');
+       return redirect()->route('login')->with('successMessage', "You are registered successfully!");
+    
     }
 
     public function storeEmployer(RegistrationFormRequest $request){
@@ -46,7 +47,7 @@ class UserController extends Controller
          'user_type' => self::JOB_POSTER
         ]);
  
-        return redirect()->route('login');
+        return redirect()->route('login')->with('successMessage', "You are registered successfully!");
      }
 
     public function login(){
@@ -64,7 +65,7 @@ class UserController extends Controller
             return redirect()->intended('dashboard');
         }
 
-        return "Wrong email or password";
+        return redirect()->route('login')->with('errorMessage', "Wrong email or password");
     }
 
     public function logout(){
