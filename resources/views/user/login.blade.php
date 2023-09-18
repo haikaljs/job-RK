@@ -9,8 +9,11 @@
                             <div class="card shadow-lg">
                                 
                                 <div class="card-body p-5">
-                                    <div class="text-center mb-4 fs-2 fw-bold">
-                                        Login
+                                    <div class="pt-4">
+                                        <p class="fs-5 text-center mb-0 text-capitalize">Already have account?</p>
+                                        <div class="text-center mb-4 fs-2 fw-bold">
+                                            Login
+                                        </div>
                                     </div>
                                     <form action="#" method="post">
                                         @csrf

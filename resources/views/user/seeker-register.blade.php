@@ -7,11 +7,15 @@
                 
                         <div class="col-lg-5">
                             <div class="card shadow-lg">
-                                
-                                <div class="card-body p-5">
+                                <div class="pt-5">
+                                    <p class="fs-5 text-center mb-0 text-capitalize">Are You Looking for a job?</p>
                                     <div class="text-center mb-4 fs-2 fw-bold">
                                         Register
                                     </div>
+                                </div>
+                                <div class="card-body px-5 pb-4">
+                                  
+                                   
                                     <form action="{{ route('store.seeker') }}" method="post">
                                         @csrf
                                         <div class="mb-3">
