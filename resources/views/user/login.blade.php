@@ -15,7 +15,7 @@
                                             Login
                                         </div>
                                     </div>
-                                    <form action="#" method="post">
+                                    <form action="{{ route('login.post') }}" method="post">
                                         @csrf
                                         
                                         <div class="mb-3">
