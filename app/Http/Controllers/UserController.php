@@ -44,7 +44,8 @@ class UserController extends Controller
          'name' => request('name'),
          'email' => request('email'),
          'password' => bcrypt(request('password')), 
-         'user_type' => self::JOB_POSTER
+         'user_type' => self::JOB_POSTER,
+         'user_trial' => now()->addWeeks()
         ]);
  
         return redirect()->route('login')->with('successMessage', "You are registered successfully!");
