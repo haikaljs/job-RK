@@ -5,18 +5,13 @@
     <div class="container my-5">
         <div class="row">
                 
-                        <div class="col-lg-6 mx-auto">
+                        <div class="col-lg-5 mx-auto">
                             <div class="card shadow-lg">
-                                <div class="card-header bg-dark text-white p-5">
-                                    
-                                    <div class="text-center">
-                                        <h5>Looking for a job?</h5>
-                                        <h6 >Please create an account</h6>
-                                    </div>
-                                   
-                                  
-                                </div>
+                                
                                 <div class="card-body p-5">
+                                    <div class="text-center mb-4 fs-2 fw-bold">
+                                        Register
+                                    </div>
                                     <form action="{{ route('store.seeker') }}" method="post">
                                         @csrf
                                         <div class="mb-3">
