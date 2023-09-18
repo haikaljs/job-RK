@@ -16,7 +16,7 @@
                                 <div class="card-body px-5 pb-4">
                                   
                                    
-                                    <form action="#" method="post">
+                                    <form action="{{ route('store.employer') }}" method="post">
                                         @csrf
                                         <div class="mb-3">
                                             <label class="form-label">Company Name</label>
