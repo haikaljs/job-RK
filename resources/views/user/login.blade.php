@@ -10,18 +10,11 @@
                                 
                                 <div class="card-body p-5">
                                     <div class="text-center mb-4 fs-2 fw-bold">
-                                        Register
+                                        Login
                                     </div>
-                                    <form action="{{ route('store.seeker') }}" method="post">
+                                    <form action="#" method="post">
                                         @csrf
-                                        <div class="mb-3">
-                                            <label class="form-label">Full Name</label>
-                                            <input type="text" name="name" class="form-control"  value="{{ old('name') }}">
-                                            @if ($errors->has('name'))
-                                            <p class="text-danger">{{ $errors->first('name') }}</p>
-                                            @endif
-                                            
-                                          </div>
+                                        
                                         <div class="mb-3">
                                           <label class="form-label">Email address</label>
                                           <input type="text" name="email" class="form-control"  value="{{ old('email') }}">
