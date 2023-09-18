@@ -21,17 +21,26 @@
                                         @csrf
                                         <div class="mb-3">
                                             <label class="form-label">Full Name</label>
-                                            <input type="text" name="name" class="form-control "  >
+                                            <input type="text" name="name" class="form-control"  value="{{ old('name') }}">
+                                            @if ($errors->has('name'))
+                                            <p class="text-danger">{{ $errors->first('name') }}</p>
+                                            @endif
                                             
                                           </div>
                                         <div class="mb-3">
                                           <label class="form-label">Email address</label>
-                                          <input type="email" name="email" class="form-control "  >
+                                          <input type="text" name="email" class="form-control"  value="{{ old('email') }}">
+                                          @if ($errors->has('email'))
+                                            <p class="text-danger">{{ $errors->first('email') }}</p>
+                                            @endif
                                           
                                         </div>
                                         <div class="mb-3">
                                           <label  class="form-label" >Password</label>
                                           <input type="password" name="password" class="form-control " >
+                                          @if ($errors->has('password'))
+                                            <p class="text-danger">{{ $errors->first('password') }}</p>
+                                            @endif
                                         </div>
                                       
                                         <button type="submit" class="btn btn-dark w-100 mt-4">Submit</button>

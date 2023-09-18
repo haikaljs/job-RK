@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Http\Requests\SeekerRegistrationRequest;
 
 
 class UserController extends Controller
@@ -13,7 +14,9 @@ class UserController extends Controller
         return view('user.seeker-register');
     }
 
-    public function storeSeeker(){
+    public function storeSeeker(SeekerRegistrationRequest $request){
+      
+
        User::create([
         'name' => request('name'),
         'email' => request('email'),
