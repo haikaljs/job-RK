@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Your account is not verified.</h5>
                     <p class="card-text">Please verify your account first.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    
                 </div>
             </div>
         </div>

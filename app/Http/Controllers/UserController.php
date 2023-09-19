@@ -33,6 +33,8 @@ class UserController extends Controller
         'user_type' => self::JOB_SEEKER
        ]);
 
+       Auth::login($user);
+
        $user->sendEmailVerificationNotification();
 
        return redirect()->route('login')->with('successMessage', "You are registered successfully!");
@@ -50,7 +52,10 @@ class UserController extends Controller
          'user_trial' => now()->addWeeks()
         ]);
  
+        Auth::login($user);
+
         $user->sendEmailVerificationNotification();
+        
         return redirect()->route('login')->with('successMessage', "You are registered successfully!");
      }
 
