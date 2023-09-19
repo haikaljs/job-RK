@@ -15,6 +15,10 @@ class UserController extends Controller
     const JOB_SEEKER = 'seeker';
     const JOB_POSTER = 'employer';
 
+    public function home(){
+        return view('welcome');
+    }
+
     public function createSeeker(){
         return view('user.seeker-register');
     }

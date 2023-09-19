@@ -10,8 +10,8 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Your account is not verified.</h5>
-                    <p class="card-text">Please verify your account first.</p>
-                    
+                    <p class="card-text">Please verify your account first. You may resend the verification email</p>
+                    <a href="{{ route('resend.email') }}" class="btn btn-dark">Resend verification email</a>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
 @section('content')
 
     <div class="container my-5">
+        @include('message')
         <div class="fw-bold fs-5">
             Hello, {{ auth()->user()->name }}
             @if (Auth::check() && auth()->user()->user_type == 'employer')

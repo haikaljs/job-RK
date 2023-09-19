@@ -16,9 +16,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserController::class, 'home'])->name('home');
 
 
  
@@ -40,5 +38,7 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified')->name('dashboard');
 Route::get('/verify', [DashboardController::class, 'verify'])->name('verification.notice');
+
+Route::get('/resend/verification/email', [DashboardController::class, 'resend'])->name('resend.email');
 
 
