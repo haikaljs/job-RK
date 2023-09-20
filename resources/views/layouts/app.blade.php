@@ -1,3 +1,11 @@
+ @php
+    $currentRoute = \Request::route()->getName()
+ @endphp
+
+
+ 
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -41,7 +49,7 @@
                 <a class="nav-link" href="{{ route('create.employer') }}">Employer</a>
               </li>
               @endif
-              @if (Auth::check())
+              @if (Auth::check() && $currentRoute != 'login')
               <li class="nav-item">
                 <a class="nav-link" id="logout" href="#">Logout</a>
               </li>
@@ -59,9 +67,12 @@
       let logout = document.getElementById('logout')
       let form = document.getElementById('form-logout')
       
-      logout.addEventListener('click', () => {
+      if(logout){
+        logout.addEventListener('click', () => {
         form.submit()
       })
+      }
+     
     </script>
   </body>
 </html>

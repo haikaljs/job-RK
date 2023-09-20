@@ -41,7 +41,7 @@ class UserController extends Controller
 
        $user->sendEmailVerificationNotification();
 
-       return redirect()->route('login')->with('successMessage', "You are registered successfully!");
+       return redirect()->route('dashboard')->with('successMessage', "You are registered successfully!");
     
     }
 
@@ -55,12 +55,14 @@ class UserController extends Controller
          'user_type' => self::JOB_POSTER,
          'user_trial' => now()->addWeeks()
         ]);
- 
+        
         Auth::login($user);
 
         $user->sendEmailVerificationNotification();
+
+        return response()->json('success');
         
-        return redirect()->route('login')->with('successMessage', "You are registered successfully!");
+        // return redirect()->route('login')->with('successMessage', "You are registered successfully!");
      }
 
     public function login(){
